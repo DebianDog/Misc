@@ -1,0 +1,22 @@
+*** Load SFS and run program without downloading ***
+
+For testing on XenialDog (includes for now the programs: audacious, gimp and vlc).
+Depends on httpfs2 (apt-get install httpfs2)
+Just click on one of the scripts (or run in terminal) in the folders Xenial32 or Xenial64 (depends on if you're using 32 or 64 bit version)
+A small window will appear from where you can run the application, e.g. vlc
+First time run will be a bit slow as it needs to read from http and it's running in chroot which gives some delay also
+
+How it works:
+Using httpfs2 see here: http://httpfs.sourceforge.net/ the .squashfs module will be mounted directly from http in folder e.g. httpfs_mnt_vlc.squashfs (in case vlc)
+Quote from http://httpfs.sourceforge.net/:
+HTTPFS ...
+... is a FUSE-based "file system". You may think of it, as a downloader with the speed of light.
+Then by the script "loadsfs-fuse" the .squashfs will be mounted using unionfs-fuse and the program will run in a chroot environment.
+After you quit the program it leaves no traces behind, except for config files in e.g. ~/.config/vlc
+
+Question:
+Can anyone test and give opinion if this concept would be useful ?
+
+Perhaps I'm going to extend this more but the (slow) speed might be a showstopper, specially for anyone with a slow internet connection.
+
+Fred

@@ -1,0 +1,25 @@
+#!/bin/bash
+
+if [ -z `which httpfs2` ]; then
+	msg="  Couldn't find 'httpfs2'.\nIt's a dependency of this program.\n Please install it."
+	xmessage "`echo -e $msg`"
+
+exit 0
+fi
+
+if [ -z `which loadsfs-fuse` ]; then
+	msg="  Couldn't find 'loadsfs-fuse'.\nIt's a dependency of this program.\n Please install portablesfs-loadsfs-fuse."
+	xmessage "`echo -e $msg`"
+
+exit 0
+fi
+
+URL=http://debiandog.github.io/Misc/Xenial/i386/Packages/SFS/audacious.squashfs
+FILENAME="${URL##*/}"
+mkdir httpfs_mnt_$FILENAME
+# mount the file
+httpfs2  "$URL" httpfs_mnt_$FILENAME
+loadsfs-fuse httpfs_mnt_$FILENAME/$FILENAME audacious
+umount -l httpfs_mnt_$FILENAME
+sleep 1
+rmdir httpfs_mnt_$FILENAME
