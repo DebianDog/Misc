@@ -1,0 +1,9 @@
+#!/bin/bash
+
+URL=http://debiandog.github.io/Misc/Xenial/i386/Packages/SFS/vlc.squashfs
+FILENAME="${URL##*/}"
+./loadmodule -d /root/httpfs_mnt_$FILENAME/$FILENAME
+umount -l /root/httpfs_mnt_$FILENAME
+sleep 1
+rmdir /root/httpfs_mnt_$FILENAME
+

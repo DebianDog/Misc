@@ -1,0 +1,31 @@
+#!/bin/bash
+
+# put this script in /root/ along with loadmodule (patched for httpfs)
+
+PATH=/usr/local/bin:/sbin:/usr/sbin:/bin:/usr/bin:$PATH
+
+# Wait for network connection (required when started from e.g. /etc/rc.local)
+for i in {1..100}; do
+ping -c1 google.com 2> /dev/null
+if [ $? -gt 0 ]; then
+sleep 2 && continue
+else
+break
+fi
+done
+
+if [ -z `which httpfs2` ]; then
+	msg="  Couldn't find 'httpfs2'.\nIt's a dependency of this program.\n Please install it."
+	xmessage "`echo -e $msg`"
+
+exit 0
+fi
+
+URL=http://debiandog.github.io/Misc/Xenial/amd64/Packages/SFS/vlc.squashfs
+FILENAME="${URL##*/}"
+[ ! -d /root/httpfs_mnt_$FILENAME ] && mkdir /root/httpfs_mnt_$FILENAME
+# mount the file
+httpfs2  "$URL" /root/httpfs_mnt_$FILENAME
+# requires patched (for httpfs) loadmodule script
+/root/loadmodule -a /root/httpfs_mnt_$FILENAME/$FILENAME
+
