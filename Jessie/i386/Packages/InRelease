@@ -1,0 +1,43 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+Origin: Debian
+Label: DebianDog
+Suite: testing
+Version: 1.0
+Codename: stretch
+Architectures: i386
+Components: main
+Description: DebianDog repository
+Date: Mon, 21 Sep 2020 08:26:26 +0000
+MD5Sum:
+ d41d8cd98f00b204e9800998ecf8427e                0 Packages
+ 085474b5da3f15c447c7177040663442               29 Packages.gz
+ afff325dcad030be7d76d9a2f389536c              187 Release
+ 085474b5da3f15c447c7177040663442               29 Translation-en.gz
+SHA1:
+ da39a3ee5e6b4b0d3255bfef95601890afd80709                0 Packages
+ dd12ce12b0725cb611db49b5cb38b53418e61760               29 Packages.gz
+ 43f9841c679e9a57c346d3e145357e07df657448              187 Release
+ dd12ce12b0725cb611db49b5cb38b53418e61760               29 Translation-en.gz
+SHA256:
+ e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855                0 Packages
+ eff5d6fa9cc611d1f97b5067b57a6e3ed2a39d9e59135b32f5ec4be5bdb9da54               29 Packages.gz
+ 15d6b74eab4ad1718bf25b23e767872480cbdde4d64d205de29529d9258eebc2              187 Release
+ eff5d6fa9cc611d1f97b5067b57a6e3ed2a39d9e59135b32f5ec4be5bdb9da54               29 Translation-en.gz
+SHA512:
+ cf83e1357eefb8bdf1542850d66d8007d620e4050b5715dc83f4a921d36ce9ce47d0d13c5d85f2b0ff8318d2877eec2f63b931bd47417a81a538327af927da3e                0 Packages
+ b0d0652586d67f6b1d1d74a9d73227c6eb530d9ba586d4ab8e6bd94d1e98c9d42e76cef1e180855dc7da86631eb1f8d8521a38f9725f80ceb6ef7673295ffb9a               29 Packages.gz
+ 8b18b98963ddb3ae700e66560ffc1614fd30e47a878f218aed903117b6f7bb00f77353d97a4b2491d072f4a60621f41ab82a9d9ee3a1727454cd11209dac1794              187 Release
+ b0d0652586d67f6b1d1d74a9d73227c6eb530d9ba586d4ab8e6bd94d1e98c9d42e76cef1e180855dc7da86631eb1f8d8521a38f9725f80ceb6ef7673295ffb9a               29 Translation-en.gz
+-----BEGIN PGP SIGNATURE-----
+
+iQEzBAEBCAAdFiEEEzvZDupk2V//eP5nrYe8en1zCB0FAl9oY9QACgkQrYe8en1z
+CB1brgf/WxzFOnSY8BQofVbVDurArnzonVP9SESB+j7+patAqWXzyj0YVW6UNKcE
+JJRQgp6/zAJQtxIESVEgcWEuzogtskeTt5YAz4BrS3ML5lpraiA/HUBpi6uab7tA
+lryXc7LbiMBOpf08fiuD7FRjE6MxorEGw9xte9y7Z2YJ/rDZs8Rg16edmVx5LLjl
+DhuiQos2SrvsGSRWJNTD302DarInnfsBV7fcFAzb8HQvY2dM5auzJ7ASiVwJq5Ta
+fm0gpaGzLgfvXj2vdKB1VKzYsk8e1VTHG74KnsnONiYk4yufNYcKIht+0QYo4Bec
+A+b23AHJ22yVG/xsAyGEWGiU0cdcXQ==
+=ouUv
+-----END PGP SIGNATURE-----
